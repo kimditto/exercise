@@ -120,4 +120,4 @@
      18. Control Plane 에서 Calico 네트워크 플러그인 설치
      
        - kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml
-        
+       

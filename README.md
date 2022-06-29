@@ -79,7 +79,7 @@
         sudo systemctl restart docker
         sudo systemctl status docker
 
-     12. kubeadm, kubelet, kubectl 설치
+    12. kubeadm, kubelet, kubectl 설치
     
         sudo apt-get -y update
         sudo apt-get install -y apt-transport-https ca-certificates curl

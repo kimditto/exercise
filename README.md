@@ -78,6 +78,7 @@
         sudo systemctl daemon-reload
         sudo systemctl restart docker
         sudo systemctl status docker
+
     12. kubeadm, kubelet, kubectl 설치
     
         sudo apt-get -y update

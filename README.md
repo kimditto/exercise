@@ -10,18 +10,22 @@
   - tarraform apply --var-file module.tfvars --auto-approve
 
 ## 쿠버네티스 설치
-1. Control Plane 에 접속해서 host 명을 변경한다 
-  - sudo -i
-  - sudo hostnamectl set-hostname k8s-master
-  - sudo -i
-2. swap 해제
-  - swapoff -a
-  - sudo sed -i '/ swap / s/^/#/' /etc/fstab
-3. 방화벽 해제
-  - sudo ufw disable
-4. 패키지 업데이트
-  - sudo apt-get update -y
-5. IPSTABLE 확인('net.bridge.bridge-nf-call-iptables의 값이 1로 설정되어 있는지 확인')
+ 1. Control Plane 에 접속해서 host 명을 변경한다 
+    
+    sudo -i
+    sudo hostnamectl set-hostname k8s-master
+    sudo -i
+ 2. swap 해제
+    
+    swapoff -a
+    sudo sed -i '/ swap / s/^/#/' /etc/fstab
+ 3. 방화벽 해제
+    
+    sudo ufw disable
+ 4. 패키지 업데이트
+    
+    sudo apt-get update -y
+ 5. IPSTABLE 확인('net.bridge.bridge-nf-call-iptables의 값이 1로 설정되어 있는지 확인')
 
     cat <<EOF | sudo tee /etc/modules-load.d/k8s.conf
     br_netfilter
@@ -31,7 +35,7 @@
     net.bridge.bridge-nf-call-iptables = 1
     EOF
     sudo sysctl --system
- 6. docker 설치
+  6. docker 설치
  
     sudo apt-get -y update
     sudo apt-get -y install \

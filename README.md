@@ -20,10 +20,9 @@
     swapoff -a
     sudo sed -i '/ swap / s/^/#/' /etc/fstab
  3. 방화벽 해제
-    
     sudo ufw disable
  4. 패키지 업데이트
-    
+
     sudo apt-get update -y
  5. IPSTABLE 확인('net.bridge.bridge-nf-call-iptables의 값이 1로 설정되어 있는지 확인')
 
@@ -36,7 +35,7 @@
     EOF
     sudo sysctl --system
   6. docker 설치
- 
+
     sudo apt-get -y update
     sudo apt-get -y install \
     apt-transport-https \

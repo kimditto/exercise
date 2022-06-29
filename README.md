@@ -10,7 +10,7 @@
    tarraform apply --var-file module.tfvars --auto-approve
 
 ## 쿠버네티스 설치
-1. Control Plane 에 접속해서 host 명을 변경한다 
+  1. Control Plane 에 접속해서 host 명을 변경한다 
    
      sudo -i
      sudo hostnamectl set-hostname k8s-master

@@ -26,8 +26,8 @@ region               =          "koreacentral"
 vnet_cidr            =          "10.0.0.0/16"
 subnet_cidr1         =          "10.0.1.0/24"
 subnet_cidr2         =          "10.0.2.0/24"
-subnet_cidr3         =          "10.0.2.0/24"
-password             =          "SKCCcpo!234567"
+subnet_cidr3         =          "10.0.3.0/24"
+password             =          "Skcc!2345678"
 admin_access_cidrs   =          "<Your Public IP>/24"
 
 ```

@@ -54,13 +54,13 @@
     https://download.docker.com/linux/ubuntu \
     $(lsb_release -cs) stable" | \
     sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-   9. docker 설치
-   
+  9. docker 설치
+  
        sudo apt-get -y update
        sudo apt-get -y install docker-ce docker-ce-cli containerd.io
-   10. CGROUP 설정
-   
-         sudo mkdir /etc/docker
+  10. CGROUP 설정
+
+        sudo mkdir /etc/docker
         cat <<EOF | sudo tee /etc/docker/daemon.json
         {
         "exec-opts": ["native.cgroupdriver=systemd"],
